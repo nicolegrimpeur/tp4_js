@@ -1,7 +1,8 @@
 class Observable {
 
-    constructor() {
-
+    constructor(eventName, callback) {
+        this.eventName = eventName;
+        this.callback = callback;
     }
 
     on(eventName, callback) {
