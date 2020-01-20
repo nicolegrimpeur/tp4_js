@@ -4,7 +4,7 @@
 
 	let winCallback = function(player) {
 		console.log('Player', player, 'win !');
-	}
+	};
 
 	observableObject.on('win', winCallback);
 	observableObject.on('move', function(player, x, y) {

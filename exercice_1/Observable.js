@@ -1,16 +1,15 @@
-class Observable {
+class Observable extends Event_tab{
 
     constructor(eventName, callback) {
-        this.eventName = eventName;
-        this.callback = callback;
+        super(eventName, callback);
     }
 
     on(eventName, callback) {
-
+        super.nouveau(eventName, callback);
     }
 
     off(eventName, callback) {
-
+        super.suppr(eventName, callback);
     }
 
     trigger(eventName, ...args) {
