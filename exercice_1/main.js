@@ -10,6 +10,9 @@
 	observableObject.on('move', function(player, x, y) {
 		console.log('Player', player, 'is moving on ('+x+','+y+')');
 	});
+	observableObject.on('move', function(player, x, y) {
+		console.log('Player', player, 'is moving on ('+x+','+y+')');
+	});
 
 	console.log(observableObject);
 	observableObject.off('win', winCallback);
