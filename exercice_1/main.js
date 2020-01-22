@@ -4,9 +4,12 @@
 
 	let winCallback = function(player) {
 		console.log('Player', player, 'win !');
-	}
+	};
 
 	observableObject.on('win', winCallback);
+	observableObject.on('move', function(player, x, y) {
+		console.log('Player', player, 'is moving on ('+x+','+y+')');
+	});
 	observableObject.on('move', function(player, x, y) {
 		console.log('Player', player, 'is moving on ('+x+','+y+')');
 	});
