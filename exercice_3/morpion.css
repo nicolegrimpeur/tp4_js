@@ -17,12 +17,19 @@ td {
   position: fixed; 
   top: 0; 
   left: 0; 
-
   /* préserve les ratios */
   min-width: 100%;
-  min-height: 100%;}
+  min-height: 100%;
+}
+
+
 
 
   h1{
   	text-align: center;
   }
+h3{
+	font-family: Ringbearer;
+	text-align: center;
+
+}
