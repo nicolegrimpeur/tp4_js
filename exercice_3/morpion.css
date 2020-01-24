@@ -22,13 +22,12 @@ td {
   min-height: 100%;
 }
 
-
+@font-face { font-family: "ringbearer" ;src: url(RINGM.ttf);}
 
 
  h1,h3{
   	text-align: center;
   	color: white;
 	font-size: 30px ;
-	font-family: Cardo , serif;
-	
+	font-family: ringbearer;
   }
