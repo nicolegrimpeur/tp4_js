@@ -3,9 +3,31 @@ table {
 }
 
 td {
-	border: solid 1px black;				
+	border: solid 3px white;				
 	display: table-cell;
-	width: 100px;
-	height: 100px;
+	width: 240px;
+	height: 240px;
 	text-align: center;
 }
+
+/* classe pour le fond d'écran du plateau  */
+.masthead {
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%), url(https://vignette.wikia.nocookie.net/seigneur-des-anneaux/images/f/f2/Carte_terre_du_milieu.jpg/revision/latest/scale-to-width-down/1000?cb=20140301162003&path-prefix=fr);
+  background-size: 1680px ;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* préserve les ratios */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@font-face { font-family: "ringbearer" ;src: url(RINGM.ttf);}
+
+
+ h1,h3{
+  	text-align: center;
+  	color: white;
+	font-size: 30px ;
+	font-family: ringbearer;
+  }
