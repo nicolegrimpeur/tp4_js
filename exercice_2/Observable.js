@@ -1,7 +1,7 @@
 class Observable extends Event_tab{
 
-    constructor(eventName, callback) {
-        super(eventName, callback);
+    constructor() {
+        super();
     }
 
     on(eventName, callback) {
