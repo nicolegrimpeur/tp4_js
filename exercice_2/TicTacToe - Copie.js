@@ -15,11 +15,12 @@ class TicTacToe extends Observable {
     }
 
     play(x, y) {
-        if (this.getCaseState(x, y) == undefined && !this.isFinished() && this.tour != 9) {
-            this.tour++;
+        this.tour++;
+        if (this.getCaseState(x, y) == undefined) {
             this.grid[x][y] = this.currentPlayer;
-            this.currentPlayer = this.getCurrentPlayer();
         }
+        this.currentPlayer = this.getCurrentPlayer();
+
     }
 
     reset() {
@@ -29,7 +30,6 @@ class TicTacToe extends Observable {
             }
         }
         this.tour = 0;
-        this.currentPlayer = 0;
     }
 
     getCurrentPlayer() {
@@ -62,23 +62,37 @@ class TicTacToe extends Observable {
         }
 
         // test si égalite à la fin du jeu
-        if (this.tour == 9) {
-            return true;
-        }
-        return false;
+        return this.egalite();
     }
 
     hasWinner() {
-        if (this.isFinished() && this.tour == 9) {
-            return false;
+        if (this.isFinished()) {
+            if (this.egalite()) {
+                return undefined;
+            }
+            return true;
         }
-        return this.isFinished();
+
+        return false;
     }
 
     getWinner() {
-        if (this.tour == 9) {
+        if (this.hasWinner() == undefined) {
             return undefined;
         }
         return !this.currentPlayer;
     }
+
+    egalite() {
+        let fini = true;
+        for (let i = 0; i < 3; ++i) {
+            for (let j = 0; j < 3; ++j) {
+                if (this.grid[i][j] == undefined) {
+                    fini = false;
+                }
+            }
+        }
+        return fini;
+    }
+
 }

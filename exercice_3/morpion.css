@@ -5,9 +5,27 @@ table {
 td {
 	border: solid 3px white;				
 	display: table-cell;
-	width: 240px;
-	height: 240px;
+	width: 200px;
+	height: 200px;
 	text-align: center;
+}
+
+/* classe pour les pions */
+.personnages {
+	height: 150px;
+	width: 150px;
+}
+
+/* classe pour les images des personnages pour afficher à qui est le tour*/
+.mini_persos {
+	height: 30px;
+	width: 30px;
+}
+
+/* classe du bouton reset */
+.reset {
+	height: 60px;
+	width: 60px;
 }
 
 /* classe pour le fond d'écran du plateau  */

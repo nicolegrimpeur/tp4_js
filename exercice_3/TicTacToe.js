@@ -1,6 +1,7 @@
 class TicTacToe extends Observable {
     constructor() {
         super();
+        // mise à 0 des variables utiles
         this.grid = new Array(3); // tableau de position en 3*3
         this.init_grid();
         this.reset();
@@ -8,12 +9,14 @@ class TicTacToe extends Observable {
         this.currentPlayer = 0;
     }
 
+    // initialise la taille de la liste grid
     init_grid() {
         for (let i = 0; i < 3; ++i) {
             this.grid[i] = Array(3);
         }
     }
 
+    // permet de placer un pion
     play(x, y) {
         if (this.getCaseState(x, y) == undefined && !this.isFinished() && this.tour != 9) {
             this.tour++;
@@ -22,6 +25,7 @@ class TicTacToe extends Observable {
         }
     }
 
+    // remet à 0 le tableau grid et les variables utiles
     reset() {
         for (let i = 0; i < 3; ++i) {
             for (let j = 0; j < 3; ++j) {
@@ -32,14 +36,17 @@ class TicTacToe extends Observable {
         this.currentPlayer = 0;
     }
 
+    // renvoi le joueur
     getCurrentPlayer() {
         return (this.tour % 2);
     }
 
+    // renvoi l'etat d'une case
     getCaseState(x, y) {
         return this.grid[x][y];
     }
 
+    // renvoi si un joueur à gagner ou non
     isFinished() {
         for (let i = 0; i < 3; ++i) {
             // test colonnes
@@ -62,23 +69,16 @@ class TicTacToe extends Observable {
         }
 
         // test si égalite à la fin du jeu
-        if (this.tour == 9) {
-            return true;
-        }
         return false;
     }
 
+    // renvoi si l'on a un gagnant ou non
     hasWinner() {
-        if (this.isFinished() && this.tour == 9) {
-            return false;
-        }
         return this.isFinished();
     }
 
+    // donne le gagnant
     getWinner() {
-        if (this.tour == 9) {
-            return undefined;
-        }
         return !this.currentPlayer;
     }
 }
