@@ -1,7 +1,5 @@
 class Event_tab {
-    constructor(eventName, callback) {
-        this.eventName = eventName;
-        this.callback = callback;
+    constructor() {
         this.tab = new Array();
     }
 
