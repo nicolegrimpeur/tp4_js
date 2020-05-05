@@ -85,7 +85,7 @@ class TicTacToeView {
 
         // on définit quel est l'image que l'on doit afficher
         if (this.game.currentPlayer == 0) img.setAttribute('src', 'frodon.png');
-        else img.setAttribute('src', 'sauron.png');;
+        else img.setAttribute('src', 'sauron.png');
     }
 
     // affiche une image qui permet de relancer le jeu

@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Morpion - Tests unitaires</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="morpion.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="morpion.css"/>
     <script type="text/javascript" src="Event.js"></script>
     <script type="text/javascript" src="Observable.js"></script>
     <script type="text/javascript" src="TicTacToe.js"></script>
     <script type="text/javascript" src="TicTacToeView.js"></script>
-  </head>
-  <body>  
-    <!-- Il aurait fallu utiliser un moteur de template pour générer les vues
-         ... ce sera pour le prochain cours ;) -->
-         
-   <!-- Fond d'écran de l'accueil -->
-   <div class="masthead">
-   	<h1>
-   		<img src="https://fontmeme.com/permalink/200124/5e2321bd65b93e1b2093e349761f5035.png" alt="police-le-seigneur-des-anneaux" border="0">
-   	</h1>
-    <h3><span id="player_number" >C'est au joueur ?</span>  </h3>
+</head>
+<body>
+<!-- Il aurait fallu utiliser un moteur de template pour générer les vues
+     ... ce sera pour le prochain cours ;) -->
 
-	<center><table id="morpion">
-		<tr>
-			<td data='1'></td>
-			<td data='2'></td>
-			<td data='3'></td>
-		</tr>
-		<tr>
-			<td data='4'></td>
-			<td data='5'></td>
-			<td data='6'></td>
-		</tr>
-		<tr>
-			<td data='7'></td>
-			<td data='8'></td>
-			<td data='9'></td>
+<!-- Fond d'écran de l'accueil -->
+<div class="masthead">
+    <h1>
+        <img src="https://fontmeme.com/permalink/200124/5e2321bd65b93e1b2093e349761f5035.png"
+             alt="police-le-seigneur-des-anneaux" border="0">
+    </h1>
+    <h3><span id="player_number">C'est au joueur ?</span></h3>
 
-		</tr>
-	</table>
-		<br>
+    <center>
+        <table id="morpion">
+            <tr>
+                <td data='1'></td>
+                <td data='2'></td>
+                <td data='3'></td>
+            </tr>
+            <tr>
+                <td data='4'></td>
+                <td data='5'></td>
+                <td data='6'></td>
+            </tr>
+            <tr>
+                <td data='7'></td>
+                <td data='8'></td>
+                <td data='9'></td>
 
-	</center>
+            </tr>
+        </table>
+        <br>
+
+    </center>
 </div>
 
-    <script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
-  </body>
+</body>
 </html>
